@@ -29,6 +29,13 @@ header{
 }
 section{
     position:relative;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 .logo{
     font-size:25px;
@@ -93,7 +100,7 @@ li{
 }
 .home{
     width:98%;
-    height:700px;
+    margin-top:10%;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -469,6 +476,67 @@ img {
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
 }
+footer{
+    background-color: black;
+    p{
+        padding:2%;
+    }
+}
+.footer{
+    padding:5% 5%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20%;
+    h4{
+        padding:5% 0;
+    }
+    a{
+        text-decoration:none;
+        color:#757575;
+        font-size:13px;
+    }
+}
+.footer a:hover{
+    background: linear-gradient(45deg, var(--blue), var(--green));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.social{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.form{
+    border:none;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    input{
+        border-radius:5px;
+        font-size:16px;
+    }
+}
+.getintouch{
+    text-align:center;
+    background: #19212e;
+    padding: 2%;
+    border-radius: 10px;
+}
+.submit{
+    background: linear-gradient(45deg, var(--blue), var(--green));
+    border:none;
+    border-radius:5px;
+    color:#ffff;
+}
+.submit:hover{
+    background: linear-gradient(45deg, var(--blue), var(--green));
+}
 @media (min-width: 1024px) {
     .dropdownmenu {
         display: none !important;
@@ -561,7 +629,12 @@ img {
     .first{
         height:62%;
     }
-
+    .direct,.follow{
+        display:none;
+    }
+    .getintouch{
+        width:100%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -644,6 +717,14 @@ img {
             font-size:8px;
         }
     }
+    .third:hover{
+        h4{
+            font-size:15px;
+        }
+        i{
+            font-size:20px;
+        }
+    }
     .contactsection{
         height:500px;
         h1{
@@ -657,6 +738,12 @@ img {
             width:25px;
             font-size:20px;
         }
+    }
+    .getintouch{
+        width:70%;
+    }
+    footer p{
+        font-size:10px;
     }
 }
 @keyframes float {
