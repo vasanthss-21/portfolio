@@ -569,20 +569,45 @@ footer{
         font-size:16px;
     }
 }
-.getintouch{
-    text-align:center;
-    background: #19212e;
-    padding: 2%;
-    border-radius: 10px;
+.getintouch {
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    background-color: #19212e; 
 }
-.submit{
-    background: linear-gradient(45deg, var(--blue), var(--green));
-    border:none;
-    border-radius:5px;
-    color:#ffff;
+
+.form {
+    display: flex;
+    flex-direction: column; 
 }
-.submit:hover{
-    background: linear-gradient(45deg, var(--blue), var(--green));
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding:1%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px; 
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button.submit {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+button.submit:hover {
+    background-color: #0056b3;
 }
 @media (min-width: 1024px) {
     .dropdownmenu {
@@ -667,12 +692,6 @@ footer{
     .first{
         height:62%;
     }
-    .direct,.follow{
-        display:none;
-    }
-    .getintouch{
-        width:100%;
-    }
     .expsection{
         height:1100px;
         h4{
@@ -696,6 +715,19 @@ footer{
     .exp1,.exp2,.exp3{
         order:2;
         width:100%;
+    }
+    .getintouch {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    button.submit {
+        font-size: 14px; /* Adjust button font size */
     }
 }   
 
@@ -815,11 +847,18 @@ footer{
             font-size:20px;
         }
     }
-    .getintouch{
-        width:70%;
+    .footer{
+        flex-direction:column;
+        gap:20px;
     }
-    footer p{
-        font-size:10px;
+    .links a,.social a{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    .copyright{
+        font-size:8px;
     }
 }
 @keyframes float {
