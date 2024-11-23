@@ -15,7 +15,6 @@ body {
     background: #0c1022;
     color: #fff
 }
-
 header{
     position: fixed;
     top:0;
@@ -29,6 +28,7 @@ header{
 }
 section{
     position:relative;
+    padding:0 5%;
     opacity: 0;
     transform: translateY(-100px);
     transition: opacity 0.5s ease, transform 1s ease;
@@ -100,19 +100,22 @@ li{
 }
 .home{
     width:98%;
+    height:500px;
     margin-top:10%;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
-    padding:0 5%;
+    align-items: center; 
 }
-
+.home-left{
+    display: flex;
+    flex-direction:column;
+    gap:20px;
+}
 .home-content{
     max-width:700px;
 }
 .home-content h1{
     font-size: 50px;
-    font-family: Ga Maamli;
     font-weight: 600;
     animation: uptodown 1s ;
 }
@@ -125,17 +128,15 @@ li{
 
 .home-content p{
     text-align:justify;
-    padding-right: 5%;
     font-size: var(--p-size);
-    margin: 20px 0 20px;
     animation: downtoup 1s ;
 }
 
 .btn{
-    display: inline-flex;
+    display:flex;
+    width:250px;
     height: 48px;
     transition: 1s ease;
-    padding: 10px;
     background: linear-gradient(45deg, var(--blue), var(--green));
     text-decoration: none;
     border-radius: 16px;
@@ -152,6 +153,7 @@ li{
 }
 .home-icons{
     display: flex;
+    gap:20px;
 }
 .home-icons a{
     display: flex;
@@ -165,8 +167,6 @@ li{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    margin-right:20px;
-    margin-bottom:30px;
     animation: float 3s ease-in-out infinite;
 }
 .home-icons a:hover{
@@ -223,36 +223,82 @@ img {
     left: -100%;
 }
 .aboutsection{
-    padding:0 5%;
     width:100%;
-    height:700px;
+    height:600px;
     display:flex;
     align-items:center;
     justify-content:center;
+    flex-direction:column;
+    gap:20px;
+    p{
+        text-align:justify;
+        font-size:var(--p-size);
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        background: linear-gradient(to right,var(--blue),var(--green)); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+        animation: uptodown 1s ;
+    }
 }
-.about h1{
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    background: linear-gradient(to right,var(--blue),var(--green)); 
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text; 
-    animation: uptodown 1s ;
+.expsection{
+    height:750px;
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(to right,var(--blue),var(--green)); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+        animation: uptodown 1s ;
+    }
+    h4{
+        padding:2% 0;
+        font-size:20px;
+    }
 }
-.about-content{
-    font-size:var(--p-size);
-    padding: 2% 0 2% 0;
+.exp{
+    width:100%;
+    height:200px;
+    display:flex;
+    align-items:center;
+    gap:30%;
+}
+.exp1,.exp3{
+    width:45%;
     text-align:justify;
+    p{
+        font-size:var(--p-size);
+    }
 }
-.about-content2{
+.exp2{
+    width: 45%;
+    order:1;
     text-align:justify;
+    p{
+        font-size:var(--p-size);
+    }
 }
-.tools{
-    padding: 0 5%;
+.two{
+    justify-content:right;
+}
+.expimg{
+    position:relative;
+    width:150px;
+    height:150px;
+    animation: float 4s ease-in-out infinite;
+}
+.blur{
+    filter: blur(5px);
+}
+.skillsection{
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    gap:90px;
     height:600px;
     width:100%;
     h1{
@@ -265,7 +311,6 @@ img {
     }
 }
 .skills {
-    margin-top: 90px;
     display: flex;
     flex-wrap: wrap;
     gap: 80px; 
@@ -305,20 +350,22 @@ img {
     height:50px;
 }
 .projectsection {
-    padding: 0 5%;
+    height:1000px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    h1 {
+        align-items:center;
+        text-align: center;
+        font-size: 2.5rem;
+        background:linear-gradient(to right,var(--blue),var(--green));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
 }
 
-.projectsection h1 {
-    margin-top:100px;
-    text-align: center;
-    font-size: 2.5rem;
-    background:linear-gradient(to right,var(--blue),var(--green));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
 .project{
     overflow:hidden;
-    margin-bottom: 100px;
     gap: 30px;
     display:flex;
     flex-wrap:wrap;
@@ -570,16 +617,13 @@ footer{
         height:70px;
     }
     .home{
+        height:800px;
         flex-direction:column;
         margin-top:100px;
     }
     .img{
         width:auto;
         padding: 20px;
-    }
-    .home-icons{
-        display:none;
-        float:left;
     }
     .home-content {
         margin-top:50px;
@@ -589,27 +633,21 @@ footer{
         text-align: center;
         padding:0;
     }
-    .home-content a{
-        margin:0 20% 10% 20%;
-        display:flex;
-        align-items:center;
+    .home-left{
         justify-content:center;
-    }
-    .btn{
-        display:flex;
-        margin:0 30%;
+        align-items:center;
     }
     .img{
         margin-top:20px;
     }
-    .aboutsection{
-        margin-top:100px;
-    }
     .about{
         padding-left:0;
     }
-    .tools{
+    .skillsection{
         height:800px;
+    }
+    .projectsection{
+        height:1850px;
     }
     .project1,
     .project2,
@@ -635,7 +673,31 @@ footer{
     .getintouch{
         width:100%;
     }
-}
+    .expsection{
+        height:1100px;
+        h4{
+            font-size:16px;
+        }
+        p{
+            font-size:12px;
+        }
+    }
+    .exp{
+        flex-direction:column;
+        height:auto;
+        padding:2% 0;
+        h4{
+            text-align:center;
+        }
+        p{
+            font-size:15px;
+        }
+    }
+    .exp1,.exp2,.exp3{
+        order:2;
+        width:100%;
+    }
+}   
 
 @media (max-width: 576px) {
     :root{
@@ -654,10 +716,11 @@ footer{
     .btn{
         height:30px;
         font-size:11px;
+        margin:0 15%;
     }
     .home{
         width:100%;
-        height:450px;
+        height:500px;
         h1{
             font-size:25px;
         }
@@ -688,7 +751,19 @@ footer{
     .aboutcontent{
         text-align:center;
     }
-    .tools{
+    .expsection{
+        h1{
+            font-size:30px;
+        }
+        p{
+            font-size:11px;
+        }
+        img{
+            width:120px;
+            height:120px;
+        }
+    }
+    .skillsection{
         h1{
             font-size:30px;
         }
@@ -698,6 +773,7 @@ footer{
         height:100px;
     }
     .projectsection{
+        height:1050px;
         h1{
             font-size:30px;
         }
