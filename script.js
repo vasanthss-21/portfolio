@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
   
     const options = {
-      threshold: 0.4, // Trigger animation when 20% of the section is visible
+      threshold: 0.3, // Trigger animation when 20% of the section is visible
     };
   
     const observer = new IntersectionObserver((entries, observer) => {
