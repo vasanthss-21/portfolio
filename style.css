@@ -369,13 +369,14 @@ img {
     display:flex;
     flex-wrap:wrap;
     padding:0 5%;
-    justify-content: center;
+    justify-content: space-between;
 }
 .project1,
 .project2,
 .project3,
 .project4,
-.project5 {
+.project5,
+.project6{
     width: 400px;
     height: 400px;
     display: flex;
@@ -472,6 +473,10 @@ img {
 }
 .project5 .second{
     background: url("Img/img7.jpg") no-repeat center center;
+    background-size: cover;
+}
+.project6 .second{
+    background: url("Img/img8.jpg") no-repeat center center;
     background-size: cover;
 }
 
@@ -624,7 +629,8 @@ button.submit:hover {
     .project2,
     .project3,
     .project4,
-    .project5{
+    .project5,
+    .project6{
         width:350px;
         height:350px;
         p{
@@ -677,13 +683,14 @@ button.submit:hover {
         height:800px;
     }
     .projectsection{
-        height:2250px;
+        height:2750px;
     }
     .project1,
     .project2,
     .project3,
     .project4,
-    .project5{
+    .project5,
+    .project6{
         width: 100%;
         h4{
             font-size:20px;
@@ -813,7 +820,7 @@ button.submit:hover {
         height:100px;
     }
     .projectsection{
-        height:1300px;
+        height:1550px;
         h1{
             font-size:30px;
         }
@@ -822,7 +829,8 @@ button.submit:hover {
     .project2,
     .project3,
     .project4,
-    .project5 {
+    .project5,
+    .project6{
         width:100%;
         height:200px;
     }
