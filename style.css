@@ -350,7 +350,7 @@ img {
     height:50px;
 }
 .projectsection {
-    height:1300px;
+    height:1000px;
     display:flex;
     flex-direction:column;
     h1 {
@@ -683,7 +683,7 @@ button.submit:hover {
         height:800px;
     }
     .projectsection{
-        height:2750px;
+        height:2000px;
     }
     .project1,
     .project2,
@@ -820,7 +820,7 @@ button.submit:hover {
         height:100px;
     }
     .projectsection{
-        height:1550px;
+        height:1200px;
         h1{
             font-size:30px;
         }
